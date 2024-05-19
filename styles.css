@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Fugaz One", sans-serif;
+  color: #153448;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+form {
+  font-family: "Nunito Sans", sans-serif;
+  color: #3C5B6F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+form input {
+  width: 50%;
+  padding: 6px 10px;
+  border: solid #3C5B6F 0.5px;
+  outline: none;
+}
+form button {
+  background-color: aliceblue;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+form button:hover {
+  background-color: #cdd8e2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1.5rem;
+  padding: 2rem;
+}
+.cards li {
+  padding: 1.8rem;
+  background-color: aliceblue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.history h2 {
+  text-align: center;
+  color: #153448;
+  font-family: "Fugaz One", sans-serif;
+  font-size: 1.5rem;
+}
+.history .expense-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  list-style-type: none;
+  color: #3C5B6F;
+  background-color: aliceblue;
+  width: 100vw;
+  font-size: 1.3rem;
+}
+.history #clearHistoryButton {
+  float: right;
+  margin: 0 50px 30px 0;
+  background-color: aliceblue;
+  border: none;
+  color: #153448;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.history #clearHistoryButton:hover {
+  background-color: #cdd8e2;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  form input {
+    width: 30%;
+  }
+  .cards li {
+    padding: 1.2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

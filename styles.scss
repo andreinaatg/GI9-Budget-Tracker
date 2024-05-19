@@ -1,0 +1,120 @@
+$headerFont: "Fugaz One", sans-serif;
+$generalFont: "Nunito Sans", sans-serif;
+$primaryColor: #153448;
+$secondaryColor: #3C5B6F;
+$bacgroundColor: aliceblue;
+
+
+
+@mixin flexCenter($direction,$content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: $generalFont;
+}
+
+h1{ 
+    font-family: $headerFont;
+    color: $primaryColor;
+    margin-bottom: 50px ;
+    @include flexCenter(row,center);
+}
+
+
+
+form {
+    font-family: $generalFont;
+    color: $secondaryColor;
+    @include flexCenter(row,center);
+    input {
+        width: 50%;
+        padding: 6px 10px;
+        border: solid $secondaryColor .5px;
+        outline: none;
+    }
+    button {   
+        background-color: $bacgroundColor;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            background-color: #cdd8e2;
+        }
+    }
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 2rem;
+    li {
+        padding: 1.8rem;
+        background-color: $bacgroundColor;
+        border-radius: 5px;
+        @include flexCenter(row,center );
+        gap: 1.5rem;
+        cursor: pointer;
+    }
+
+}
+.history {
+    h2 {
+        text-align: center;
+        color: $primaryColor;
+        font-family: $headerFont;
+        font-size: 1.5rem
+    }
+    .expense-history{
+        @include flexCenter(column,center );
+        margin-top: 20px;
+        list-style-type: none;
+        color: $secondaryColor;
+        background-color: $bacgroundColor;
+        width: 100vw;
+        font-size: 1.3rem;
+    }
+
+    #clearHistoryButton {
+        float: right;
+        margin: 0 50px 30px 0;
+        background-color: $bacgroundColor;
+        border: none;
+        color: $primaryColor;
+        padding: 10px 15px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all .2s;
+        &:hover {
+            background-color: #cdd8e2;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    form {
+        input {
+            width: 30%;
+        }
+    }
+    .cards {
+        li {
+            padding: 1.2rem;
+        }
+    }
+}
