@@ -7,3 +7,5 @@ Features
 * Display Summary: The application dynamically displays your total income, total expenses, and remaining balance.
 * Expense History: View a history of your expenses, including the date, category, and amount.
 * Clear History: Clear your expense history if needed.
+
+click here to view website https://gi9-budget-tracker.netlify.app/
