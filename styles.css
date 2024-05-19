@@ -4,6 +4,10 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+body {
+  background: linear-gradient(to right, #d8e1e7, #adbfcd);
+}
+
 h1 {
   font-family: "Fugaz One", sans-serif;
   color: #153448;
@@ -29,7 +33,7 @@ form input {
   outline: none;
 }
 form button {
-  background-color: aliceblue;
+  background: #f0f8ff;
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
@@ -48,7 +52,7 @@ form button:hover {
 }
 .cards li {
   padding: 1.8rem;
-  background-color: aliceblue;
+  background: #f0f8ff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -72,14 +76,14 @@ form button:hover {
   margin-top: 20px;
   list-style-type: none;
   color: #3C5B6F;
-  background-color: aliceblue;
+  background: #f0f8ff;
   width: 100vw;
   font-size: 1.3rem;
 }
 .history #clearHistoryButton {
   float: right;
   margin: 0 50px 30px 0;
-  background-color: aliceblue;
+  background: #f0f8ff;
   border: none;
   color: #153448;
   padding: 10px 15px;
@@ -101,5 +105,14 @@ form button:hover {
   }
   .cards li {
     padding: 1.2rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 680px) {
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */

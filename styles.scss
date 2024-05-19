@@ -1,25 +1,38 @@
+// Variables
 $headerFont: "Fugaz One", sans-serif;
 $generalFont: "Nunito Sans", sans-serif;
 $primaryColor: #153448;
 $secondaryColor: #3C5B6F;
-$bacgroundColor: aliceblue;
+$backgColor: #f0f8ff;
+$gradientColor1: #d8e1e7;
+$gradientColor2: #adbfcd;
 
-
-
-@mixin flexCenter($direction,$content) {
+// Mixins
+@mixin flexCenter($direction, $content) {
     display: flex;
     justify-content: $content;
     align-items: center;
     flex-direction: $direction;
 }
 
+@mixin gradient($start, $end) {
+    background: linear-gradient(to right, $start, $end);
+}
 
 
-*{ 
+// Global styles
+* {
     margin: 0;
     padding: 0;
     font-family: $generalFont;
 }
+
+body {
+    @include gradient($gradientColor1, $gradientColor2);
+}
+
+// Rest of your styles...
+
 
 h1{ 
     font-family: $headerFont;
@@ -41,7 +54,7 @@ form {
         outline: none;
     }
     button {   
-        background-color: $bacgroundColor;
+        background: $backgColor;
         border: none;
         padding: 5px 10px;
         border-radius: 3px;
@@ -61,7 +74,7 @@ form {
     padding: 2rem;
     li {
         padding: 1.8rem;
-        background-color: $bacgroundColor;
+        background: $backgColor;
         border-radius: 5px;
         @include flexCenter(row,center );
         gap: 1.5rem;
@@ -81,7 +94,7 @@ form {
         margin-top: 20px;
         list-style-type: none;
         color: $secondaryColor;
-        background-color: $bacgroundColor;
+        background: $backgColor;
         width: 100vw;
         font-size: 1.3rem;
     }
@@ -89,7 +102,7 @@ form {
     #clearHistoryButton {
         float: right;
         margin: 0 50px 30px 0;
-        background-color: $bacgroundColor;
+        background: $backgColor;
         border: none;
         color: $primaryColor;
         padding: 10px 15px;
@@ -116,5 +129,12 @@ form {
         li {
             padding: 1.2rem;
         }
+    }
+}
+
+@media (min-width: 320px) and (max-width:680px){
+    form {
+        width: 100%;
+        @include flexCenter(column,center )
     }
 }
